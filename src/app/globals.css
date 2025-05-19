@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Jersey+15&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+html {
+  scroll-behavior: smooth;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Jersey 15", Helvetica, sans-serif;
+  font-size: large;
+  letter-spacing: 2px;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.top_border {
+  border: 1px solid black;
+}
+
+.top_border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50.5%;
+  width: 16.5%;
+  height: 0.03rem;
+  background: black;
+  transform-origin: left bottom;
+  transform: rotate(-45deg);
+}
+
+.top_border::before {
+  content: "";
+  position: absolute;
+  bottom: 50;
+  left: 62%;
+  width: 100%;
+  height: 0.03rem;
+  background: black;
+  transform-origin: left bottom;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader_spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #3b82f6;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite, pulseGlow 1.5s ease-in-out infinite;
+  box-shadow: 0 0 8px #3b82f6;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 16px #60a5fa;
+  }
+}
+
+@media (max-width: 640px) {
+.top_border::before {
+  bottom: 38;
+}
+
+body {
+  font-size: medium;
+}
+  
+}

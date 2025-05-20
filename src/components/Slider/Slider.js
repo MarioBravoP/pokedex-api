@@ -15,9 +15,9 @@ const CustomSlider = ({ pics }) => {
 
   return (
     <div className="relative w-[200px] h-[200px] sm:w-[250px] sm:h-[212px] max-w-3xl mx-auto overflow-hidden border border-black rounded-md shadow-lg bg-white">
-      <div className="flex" style={{ transform: `translateX(-${currentIndex * 100}%) translateY(-20px)` }}>
+      <div className="flex" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {contextPics.map((src, i) => (
-          <img key={i} src={src} alt={`Slide ${i + 1}`} className="w-[210px] h-[210px] sn:w-[245px] sm:h-[245px]" />
+          <img key={i} src={src} alt={`Slide ${i + 1}`} className="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px]" />
         ))}
       </div>
 

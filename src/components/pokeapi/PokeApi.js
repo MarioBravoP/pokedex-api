@@ -1,3 +1,5 @@
+// Componente principal de la APP. Muestra la información de un Pokémon y permite buscar otros.
+
 "use client";
 import { useState, useRef } from "react";
 import { usePoke } from "@/context/PokeContext";
@@ -130,7 +132,7 @@ export default function PokeApi() {
 
 
   const renderData = () => {
-    if (loading) return <p>Cargando...</p>;
+    if (loading) return <p className="flex flex-col items-center justify-center h-full p-1 gap-2">Cargando...</p>;
     if (error) return
     if (display)
       return (
@@ -165,7 +167,7 @@ export default function PokeApi() {
 
   return (
     <>
-      <div className="flex flex-col w-[350px] h-[600px] sm:w-[450px] sm:h-[650px] shadow-2xl items-center sm:mt-10 p-2 border-[3px] border-black bg-red-500 rounded-[10px]">
+      <div className="flex flex-col w-[350px] h-[600px] sm:w-[450px] sm:h-[650px] shadow-2xl items-center sm:mt-10 p-2 border-[3px] border-black bg-red-500 rounded-[10px] my-4">
         <div className="relative h-[90px] sm:h-[120px] w-full top_border"
           style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%, 0% 100%)" }}>
           <span

@@ -1,3 +1,5 @@
+// Este archivo contiene el contexto de las peticiones a la API de Pokémon.
+
 "use client";
 import { createContext, useState, useEffect, useContext } from "react";
 import { getFixedName } from "@/utils/pokemonAliases";
@@ -64,7 +66,7 @@ export function PokeProvider({ children }) {
   };
 
   return (
-    <PokeContext.Provider value={{setDisplay, display, error, loading, searchPokemon, maxId }}>
+    <PokeContext.Provider value={{ setDisplay, display, error, loading, searchPokemon, maxId }}>
       {children}
     </PokeContext.Provider>
   );

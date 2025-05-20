@@ -1,3 +1,5 @@
+// Componente para mostrar una galería de imágenes en un slider
+
 "use client";
 import { useEffect } from "react";
 import { useSlider } from "@/context/SliderContext";
@@ -15,7 +17,7 @@ const CustomSlider = ({ pics }) => {
     <div className="relative w-[200px] h-[200px] sm:w-[250px] sm:h-[212px] max-w-3xl mx-auto overflow-hidden border border-black rounded-md shadow-lg bg-white">
       <div className="flex" style={{ transform: `translateX(-${currentIndex * 100}%) translateY(-20px)` }}>
         {contextPics.map((src, i) => (
-          <img key={i} src={src} alt={`Slide ${i + 1}`} className="w-[245px] h-[245px]" />
+          <img key={i} src={src} alt={`Slide ${i + 1}`} className="w-[210px] h-[210px] sn:w-[245px] sm:h-[245px]" />
         ))}
       </div>
 

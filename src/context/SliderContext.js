@@ -1,3 +1,5 @@
+// Este archivo contiene el contexto del slider para manejar el estado de las imágenes y la navegación entre ellas.
+
 "use client";
 import { createContext, useState, useContext } from "react";
 

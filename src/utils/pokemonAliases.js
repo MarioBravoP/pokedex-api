@@ -1,3 +1,5 @@
+// Este archivo contiene un objeto que mapea nombres de Pokémon a sus nombres fijos.
+
 const pokemonAliases = {
   "nidoran": "nidoran-m",
   "nidoran♀": "nidoran-f",

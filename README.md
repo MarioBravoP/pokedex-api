@@ -1,6 +1,8 @@
 # Pokédex
 
-Proyecto realizado para practicar con el uso de Node, Next y Tailwind.
+Link: https://pokedex-api-kohl.vercel.app/
+
+Proyecto realizado para practicar con el uso de Node, Next y Tailwind. Alojado en Vercel.
 
 ## 🚀 Tecnologías principales
 
